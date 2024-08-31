@@ -71,25 +71,39 @@ The following set of information was provided about the waterpoints:
 ![distribution of variable target](pictures/distribution of variable target.jpg)
 
 
-
-## Preprocessing
-Data preprocessing was performed to handle outliers and prepare the data for regression, including model fitting.
-
 ## Classification Models
 Several Classification Models were employed for this Analysis:
-- *Logistic Regression* - 
+Logistic Regression
+- Train Accuracy - 64.54%
+- Test Accuracy - 64.02%
 
-- *Decision Tree* - 
-
-- *Random Forest*- 
+Decision Trees
+- Train Accuracy - 80.05%
+- Test Accuracy - 67.75%
+ 
+Random Forest
+- Training Accuracy - 93.20%
+- Testing Accuracy - 77.22%
+These results highlight the model's ability to learn from the training data effectively while still generalizing well to new, unseen data. 
+ 
 
 ## Conclusions
-The top-performing model is the baseline XGBClassifier, demonstrating a training accuracy of 85.84% and a test accuracy of 82.09%. Minimal overfitting is observed, with a commendable cross-validation score of 0.819. This model's ability to generalize effectively to new data aligns with the predefined success criteria.
+###Rationale
+The Random Forest Classifier was selected as the top-performing model for this classification task due to its ability to effectively balance complexity and generalization. The model was trained and evaluated on a dataset where the goal was to accurately predict the functional status of waterpoints.
 
-## Recommendations
-1. Prioritize repairing non-functional wells to avoid multiple concurrent problems.
-2. Distribute wells strategically to prevent overpopulation in specific areas.
-3. Utilize the predictive model to prioritize waterpoints according to needs.
+###Results
+Training Accuracy: 93.20%
+Test Accuracy: 77.22%
+These results highlight the model's ability to learn from the training data effectively while still generalizing well to new, unseen data. The 77.22% test accuracy suggests that the model performs well in practical scenarios, meaning it is likely to correctly predict the operational status of a waterpoint about 77% of the time when applied to new data.
 
-## Next Steps
-Integrate maintenance records to reflect repairs made to waterpoints, preventing repeated classification as needing repairs. Explore additional classifiers to prioritize maintenance for non-functional waterpoints.
+###Limitations
+Despite the relatively high accuracy, the model's performance shows a noticeable drop from training to test accuracy (from 93.20% to 77.22%), indicating some level of model complexity that may still be capturing noise in the training data. Additionally, a test accuracy of 77.22% implies that there is still a significant proportion (22.78%) of predictions that could be incorrect. This level of accuracy might not be sufficient for critical applications where higher precision is required, such as targeting maintenance resources in regions with severe water scarcity.
+
+Another limitation is that while accuracy is a useful metric, it does not account for potential imbalances in the dataset. For instance, if the dataset has more functional than non-functional waterpoints, accuracy alone may not fully reflect the model's effectiveness in predicting each class equally well. Other evaluation metrics like precision, recall, and the F1-score should be considered for a more comprehensive assessment of the model's performance.
+
+##Recommendations
+1. Refinement of the Model: Consider further tuning of the Random Forest's hyperparameters, such as the number of trees, depth of trees, and feature selection, to see if slight adjustments can improve test accuracy without increasing overfitting.
+2. Alternative Evaluation Metrics: Evaluate the model using additional metrics like precision, recall, F1-score, and confusion matrices, especially if the classes are imbalanced. This will provide a better understanding of how well the model distinguishes between functional and non-functional waterpoints.
+3. Ensemble Methods: Explore other ensemble methods or hybrid models, such as Gradient Boosting or a combination of Random Forest with another model, to see if they can achieve better generalization and higher accuracy.
+4. Data Augmentation: Consider augmenting the data, especially for underrepresented classes, to help the model learn better and improve its performance on the test set.
+5. Periodic Retraining: Since the conditions affecting waterpoints can change over time, it's recommended to periodically retrain the model with new data to ensure it remains accurate and relevant in predicting the current status of waterpoints.
