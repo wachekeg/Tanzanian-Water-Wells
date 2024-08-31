@@ -67,9 +67,16 @@ The following set of information was provided about the waterpoints:
 - waterpoint_type - The kind of waterpoint
 - waterpoint_type_group - The kind of waterpoint
 
-## Exploratory Data Analysis (EDA) Insights
-![distribution of variable target](pictures/distribution of variable target.jpg)
 
+## Exploratory Data Analysis (EDA) Insights
+
+![Distribution of variable target](pictures/distribution_of_variable_target.jpg)
+
+![Spatial Distribution of Water Pumps](pictures/spatial_distribution.jpg)
+
+![Water Pumps by Extraction Type](pictures/heatmap_of_status_and_extraction_type.jpg)
+
+![Main Water Pump Installers](pictures/installer_tz.jpg)
 
 ## Classification Models
 Several Classification Models were employed for this Analysis:
