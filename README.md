@@ -73,6 +73,7 @@ The following set of information was provided about the waterpoints:
 
 ## Classification Models
 Several Classification Models were employed for this Analysis:
+
 Logistic Regression
 - Train Accuracy - 64.54%
 - Test Accuracy - 64.02%
@@ -89,7 +90,7 @@ These results highlight the model's ability to learn from the training data effe
 
 ## Conclusions
 ### Rationale
-The Random Forest Classifier was selected as the top-performing model for this classification task due to its ability to effectively balance complexity and generalization. The model was trained and evaluated on a dataset where the goal was to accurately predict the functional status of waterpoints.
+The **Random Forest Classifier** was selected as the top-performing model for this classification task due to its ability to effectively balance complexity and generalization. The model was trained and evaluated on a dataset where the goal was to accurately predict the functional status of waterpoints.
 
 ### Results
 Training Accuracy: 93.20%
@@ -102,8 +103,8 @@ Despite the relatively high accuracy, the model's performance shows a noticeable
 Another limitation is that while accuracy is a useful metric, it does not account for potential imbalances in the dataset. For instance, if the dataset has more functional than non-functional waterpoints, accuracy alone may not fully reflect the model's effectiveness in predicting each class equally well. Other evaluation metrics like precision, recall, and the F1-score should be considered for a more comprehensive assessment of the model's performance.
 
 ## Recommendations
-1. Refinement of the Model: Consider further tuning of the Random Forest's hyperparameters, such as the number of trees, depth of trees, and feature selection, to see if slight adjustments can improve test accuracy without increasing overfitting.
-2. Alternative Evaluation Metrics: Evaluate the model using additional metrics like precision, recall, F1-score, and confusion matrices, especially if the classes are imbalanced. This will provide a better understanding of how well the model distinguishes between functional and non-functional waterpoints.
-3. Ensemble Methods: Explore other ensemble methods or hybrid models, such as Gradient Boosting or a combination of Random Forest with another model, to see if they can achieve better generalization and higher accuracy.
-4. Data Augmentation: Consider augmenting the data, especially for underrepresented classes, to help the model learn better and improve its performance on the test set.
-5. Periodic Retraining: Since the conditions affecting waterpoints can change over time, it's recommended to periodically retrain the model with new data to ensure it remains accurate and relevant in predicting the current status of waterpoints.
+1. **Refinement of the Model:** Consider further tuning of the Random Forest's hyperparameters, such as the number of trees, depth of trees, and feature selection, to see if slight adjustments can improve test accuracy without increasing overfitting.
+2. **Alternative Evaluation Metrics:** Evaluate the model using additional metrics like precision, recall, F1-score, and confusion matrices, especially if the classes are imbalanced. This will provide a better understanding of how well the model distinguishes between functional and non-functional waterpoints.
+3. **Ensemble Methods:** Explore other ensemble methods or hybrid models, such as Gradient Boosting or a combination of Random Forest with another model, to see if they can achieve better generalization and higher accuracy.
+4. **Data Augmentation:** Consider augmenting the data, especially for underrepresented classes, to help the model learn better and improve its performance on the test set.
+5. **Periodic Retraining:** Since the conditions affecting waterpoints can change over time, it's recommended to periodically retrain the model with new data to ensure it remains accurate and relevant in predicting the current status of waterpoints.
