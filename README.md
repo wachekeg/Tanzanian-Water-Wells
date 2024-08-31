@@ -68,7 +68,7 @@ The following set of information was provided about the waterpoints:
 - waterpoint_type_group - The kind of waterpoint
 
 
-## Exploratory Data Analysis (EDA) Insights
+## Exploratory Data Analysis (EDA)
 
 ![Distribution of variable target](pictures/distribution_of_variable_target.JPG)
 
@@ -78,11 +78,11 @@ The following set of information was provided about the waterpoints:
 
 ![Spatial Distribution of Water Pumps](pictures/spatial_distribution.JPG)
 
-Clusters of yellow and teal points indicate regions where water infrastructure might be failing or in need of urgent attention.
+- Clusters of yellow and teal points indicate regions where water infrastructure might be failing or in need of urgent attention.
 
 ![Water Pumps by Extraction Type](pictures/heatmap_of_status_and_extraction_type.JPG)
 
-Largest group of functional waterpoints uses gravity-fed systems (13709), but there is also a significant number of non-functional systems (6934).
+- Largest group of functional waterpoints uses gravity-fed systems (13709), but there is also a significant number of non-functional systems (6934).
 
 ![Main Water Pump Installers](pictures/installer_tz.JPG)
 
@@ -112,6 +112,7 @@ The **Random Forest Classifier** was selected as the top-performing model for th
 ### Results
 
 Training Accuracy: 93.20%
+
 Test Accuracy: 77.22%
 
 These results highlight the model's ability to learn from the training data effectively while still generalizing well to new, unseen data. The 77.22% test accuracy suggests that the model performs well in practical scenarios, meaning it is likely to correctly predict the operational status of a waterpoint about 77% of the time when applied to new data.
