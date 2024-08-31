@@ -70,21 +70,21 @@ The following set of information was provided about the waterpoints:
 
 ## Exploratory Data Analysis (EDA) Insights
 
-![Distribution of variable target](pictures/distribution_of_variable_target.jpg)
+![Distribution of variable target](pictures/distribution_of_variable_target.JPG)
 
 - 54.6% of the water points provide access to clean water
 - 39.0% of the water points are not operational
 - 6.4% of the water points need repair
 
-![Spatial Distribution of Water Pumps](pictures/spatial_distribution.jpg)
+![Spatial Distribution of Water Pumps](pictures/spatial_distribution.JPG)
 
 Clusters of yellow and teal points indicate regions where water infrastructure might be failing or in need of urgent attention.
 
-![Water Pumps by Extraction Type](pictures/heatmap_of_status_and_extraction_type.jpg)
+![Water Pumps by Extraction Type](pictures/heatmap_of_status_and_extraction_type.JPG)
 
 Largest group of functional waterpoints uses gravity-fed systems (13709), but there is also a significant number of non-functional systems (6934).
 
-![Main Water Pump Installers](pictures/installer_tz.jpg)
+![Main Water Pump Installers](pictures/installer_tz.JPG)
 
 ## Classification Models
 Several Classification Models were employed for this Analysis:
